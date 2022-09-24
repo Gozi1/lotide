@@ -1,10 +1,10 @@
 const assertEqual = function(actual, expected) {
   if (actual !== expected) {
     let emoji = String.fromCodePoint(0x1FAE0);
-    console.log("AssertionError " + emoji + " :" + actual + " is not equal to " + expected);
+    console.log(`AssertionError ${emoji} : ${actual} is not equal to ${expected}`);
   } else {
     let emoji = String.fromCodePoint(0x1F973);
-    console.log("Assertion Passed " + emoji + " :" + actual + " is equal to " + expected);
+    console.log(`Assertion Passed ${emoji} : ${actual} is equal to ${expected}`);
   }
   
 };
