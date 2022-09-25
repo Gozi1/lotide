@@ -11,17 +11,17 @@ const assertEqual = function(actual, expected) {
 
 const tail = function(array) {
   let newArray = [];
-  for(let num in array){
-      newArray.push(array[num]);
+  for (let num in array) {
+    newArray.push(array[num]);
   }
   newArray.shift();
   return newArray;
-}
+};
 const result = tail(["Hello", "Lighthouse", "Labs"]);
-let assertArray = ["Lighthouse", "Labs"]
-length =Math.max(result.length)
-for (let i = 0; i <length ;i++){
-  assertEqual(result[i],assertArray[i])
+let assertArray = ["Lighthouse", "Labs"];
+let length = Math.max(result.length);
+for (let i = 0; i < length; i++) {
+  assertEqual(result[i],assertArray[i]);
 }
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 tail(words); // no need to capture the return value since we are not checking it
