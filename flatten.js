@@ -25,7 +25,7 @@ const flatten = function(roughArray) {
   const pusher = function(array) {
     for (let num in array) {
       if (Array.isArray(array[num])) {
-        pusher(roughArray[num]);
+        pusher(array[num]);
       } else flatArray.push(array[num]);
     }
   };
