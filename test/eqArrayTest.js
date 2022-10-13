@@ -1,4 +1,4 @@
-//exports
+//Exports
 const assertEqual = require('../assertEqual');
 const eqArrays = require('../eqArrays');
 

@@ -1,12 +1,7 @@
-const eqArrays = function(array1,array2) {
-  if (array1.length !== array2.length) return false;
-  for (let num in array1) {
-    if (array1[num] !== array2[num]) return false;
-  }
-  return true;
-};
+//requires eqArrays
+const eqArrays = require('./eqArrays');
 
-
+// This take in two arrays and console.log out a fun message depending on whether its passed or failed
 const assertArrayEqual = function(actual, expected) {
   let result = eqArrays(actual,expected);
   if (!result) {
@@ -19,5 +14,4 @@ const assertArrayEqual = function(actual, expected) {
   }
 };
 
-assertArrayEqual([1, 2, 3], [1, 2, 3]);
-assertArrayEqual([1, 2, 3], [3, 2, 1]);
+module.exports = assertArrayEqual;
