@@ -1,5 +1,5 @@
 
-//This takes in an array and return the middle-most element(s) of the given array
+//takes in an array and return the middle-most element(s) of the given array
 const middle = function(array) {
   if (array.length < 3) return [];
   if (array.length % 2 === 0) {

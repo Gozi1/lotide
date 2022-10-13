@@ -1,4 +1,4 @@
-//Takes in 2 agruments an array and a callback and returns a "slice of the array with elements taken from the beginning." It keeps going until the callback returns a truthy value.
+//takes in 2 agruments an array and a callback and returns a "slice of the array with elements taken from the beginning." It keeps going until the callback returns a truthy value
 const takeUntil = function(array, callback) {
   const returnArray = [];
   for(element of array){

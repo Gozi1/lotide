@@ -1,6 +1,6 @@
 
 const eqObjects = require('./eqObjects')
-// This take in two objects and console.log out a fun message depending on whether its passed or failed
+//take in two objects and console.log out a fun message depending on whether its passed or failed
 const assertObjectsEqual = function(actual, expected) {
   const result = eqObjects(actual,expected);
   const inspect = require('util').inspect;

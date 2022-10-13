@@ -1,7 +1,7 @@
 //requires eqArrays
 const eqArrays = require('./eqArrays');
 
-// This take in two arrays and console.log out a fun message depending on whether its passed or failed
+//take in two arrays and console.log out a fun message depending on whether its passed or failed
 const assertArrayEqual = function(actual, expected) {
   let result = eqArrays(actual,expected);
   if (!result) {
