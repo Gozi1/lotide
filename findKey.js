@@ -46,3 +46,5 @@ const result3 =findKey({
 assertEqual(result,"noma")
 assertEqual(result2,"Ora")
 assertEqual(result3,undefined)
+
+module.exports = assertEqual;
