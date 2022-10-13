@@ -1,28 +1,6 @@
-const eqArrays = function(array1,array2) {
-  if (array1.length !== array2.length) return false;
-  for (let num in array1) {
-    if (array1[num] !== array2[num]) return false;
-  }
-  return true;
-};
 
-const eqObjects = function(object1, object2) {
-  const object1Keys= Object.keys(object1);
-  const object2Keys= Object.keys(object2);
-  
-  if (object1Keys.length !== object2Keys.length) return false;
-  for(keys in object1Keys){
-    if(Array.isArray(object1[object1Keys[keys]])){
-      if(!eqArrays(object1[object1Keys[keys]],object2[object1Keys[keys]])){
-        return false;
-      }
-    }
-    else if(object1[object1Keys[keys]] !== object2[object1Keys[keys]])return false
-  }
-  return true;
-};
-
-
+const eqObjects = require('./eqObjects')
+// This take in two objects and console.log out a fun message depending on whether its passed or failed
 const assertObjectsEqual = function(actual, expected) {
   const result = eqObjects(actual,expected);
   const inspect = require('util').inspect;
@@ -37,8 +15,10 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
-const sample1 = {1:21,2:"20",3:"bad"};
-const sample2 = {1:21,2:"20",3:"bad"};
-const sample3 = {1:21,2:"20",3:[1213]};
-assertObjectsEqual(sample1,sample2);
-assertObjectsEqual(sample1,sample3);
+module.exports = assertObjectsEqual;
+//test
+// const sample1 = {1:21,2:"20",3:"bad"};
+// const sample2 = {1:21,2:"20",3:"bad"};
+// const sample3 = {1:21,2:"20",3:[1213]};
+// assertObjectsEqual(sample1,sample2);
+// assertObjectsEqual(sample1,sample3);

@@ -1,15 +1,6 @@
-const assertEqual = function(actual, expected) {
-  if (actual !== expected) {
-    let emoji = String.fromCodePoint(0x1FAE0);
-    console.log(`AssertionError ${emoji} : ${actual} is not equal to ${expected}`);
-  } else {
-    let emoji = String.fromCodePoint(0x1F973);
-    console.log(`Assertion Passed ${emoji} : ${actual} is equal to ${expected}`);
-  }
-  
-};
 
 
+// takes in a sentence (as a string) and then return a count of each of the letters in that sentence
 const countLetters = function(word) {
   let lettersCounted = {};
   for (letter in word) {
@@ -23,9 +14,10 @@ const countLetters = function(word) {
   }
   return lettersCounted;
 };
+module.exports = countLetters;
 
-let word = countLetters("LHL"),word_2 = countLetters("lighthouse in the house");
-assertEqual(word["L"], 2);
-assertEqual(word["H"], 1);
-assertEqual(word_2["h"], 4);
-assertEqual(word_2[" "], undefined);
+// let word = countLetters("LHL"),word_2 = countLetters("lighthouse in the house");
+// assertEqual(word["L"], 2);
+// assertEqual(word["H"], 1);
+// assertEqual(word_2["h"], 4);
+// assertEqual(word_2[" "], undefined);

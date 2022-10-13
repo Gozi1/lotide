@@ -1,4 +1,4 @@
-
+//takes in 2 agruments an array and a callback function and returns a new array based on the results of the callback function.
 const map = function(array,callback) {
 
   const results = [];
@@ -8,28 +8,10 @@ const map = function(array,callback) {
   }
   return results;
 };
-const eqArrays = function(array1,array2) {
-  if (array1.length !== array2.length) return false;
-  for (let num in array1) {
-    if (array1[num] !== array2[num]) return false;
-  }
-  return true;
-};
 
+module.exports = map;
 
-const assertArrayEqual = function(actual, expected) {
-  let result = eqArrays(actual,expected);
-  if (!result) {
-    let emoji = String.fromCodePoint(0x1FAE0);
-    console.log(`AssertionError ${emoji} : ${actual} is not equal to ${expected}`);
-
-  } else {
-    let emoji = String.fromCodePoint(0x1F973);
-    console.log(`Assertion Passed ${emoji} : ${actual} is equal to ${expected}`);
-  }
-};
-
-assertArrayEqual(map([1,2,4,3],num =>num * 2),[2,4,8,6]);
-assertArrayEqual(map(["canada","aaron","george"],word =>word.charAt(0).toUpperCase() + word.slice(1)),["Canada","Aaron","George"]);
-assertArrayEqual(map([1,2,4,3],num =>num + 10),[11,12,14,13]);
+// assertArrayEqual(map([1,2,4,3],num =>num * 2),[2,4,8,6]);
+// assertArrayEqual(map(["canada","aaron","george"],word =>word.charAt(0).toUpperCase() + word.slice(1)),["Canada","Aaron","George"]);
+// assertArrayEqual(map([1,2,4,3],num =>num + 10),[11,12,14,13]);
 
